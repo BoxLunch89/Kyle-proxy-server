@@ -2,11 +2,25 @@
 <html>
   <head>
       <title>Trip advisor clone</title>
+
+
+      <script src="/lib/react.development.js"></script>
+      <script src="/lib/react-dom.development.js"></script>
+
+
   </head>
   <body>
-    
-    
-    <script></script>
+    <script src="http://localhost:3004/bundle.js"></script>
+    <div id="q-and-a"></div>
+ 
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+        const id = window.location.pathname.split('/')[2];
+        ReactDOM.render(
+        React.createElement(QuestionsAndAnswers, { ID: id }),
+        document.getElementById('q-and-a')
+        );
+    </script>
 
   </body>
 </html>
