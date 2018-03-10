@@ -1,0 +1,15 @@
+
+  q-and-a:
+    image: kylechambers/q-and-a
+    depends_on:
+      - 'database'
+    ports:
+      - "3004:3004"
+
+  database:
+    image: mongo
+
+# image: emsando/overview-component
+# image: kguinto/nearby-component
+# image: zinoki/recommendations-component
+# image: bdduong/reviews-component
