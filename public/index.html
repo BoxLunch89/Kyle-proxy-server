@@ -6,51 +6,62 @@
       <!--
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       -->
-      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-      <script src="/lib/react.development.js"></script>
-      <script src="/lib/react-dom.development.js"></script>
-      <script src="http://localhost:3001/bundle.js"></script>
-      <script src="http://localhost:3002/bundle.js"></script>
-      <script src="http://localhost:3003/bundle.js"></script>
-      <script src="http://localhost:3004/bundle.js"></script>
-      <script src="http://localhost:3005/bundle.js"></script>
+
 
   </head>
+
   <body>
+      
     <div id="overview"></div>
     <div id="nearby"></div>
     <div id="recommendations"></div>
     <div id="reviews"></div>
     <div id="q-and-a"></div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+
+
+    <script src="/q-and-a/bundle.js"></script>
+    
+
+    <!--
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://localhost:3005/bundle.js"></script>
+    -->
 
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
-        const id = window.location.pathname.split('/')[2];
+        const id = window.location.pathname.split('/')[1];
+       
+        // ReactDOM.render(
+        // React.createElement(Overview, { id: Number(id) }),
+        // document.getElementById('overview')
+        // );
 
-        ReactDOM.render(
-        React.createElement(Overview, { id: Number(id) }),
-        document.getElementById('overview')
-        );
+        // ReactDOM.render(
+        // React.createElement(Nearby, { id: id }),
+        // document.getElementById('nearby')
+        // );
 
-        ReactDOM.render(
-        React.createElement(Nearby, { id: id }),
-        document.getElementById('nearby')
-        );
+        // ReactDOM.render(
+        // React.createElement(Recommendations, { id: id }),
+        // document.getElementById('recommendations')
+        // );
 
-        ReactDOM.render(
-        React.createElement(Recommendations, { id: id }),
-        document.getElementById('recommendations')
-        );
-
-        ReactDOM.render(
-        React.createElement(Reviews, { id: id }),
-        document.getElementById('reviews')
-        );
+        // ReactDOM.render(
+        // React.createElement(Reviews, { id: id }),
+        // document.getElementById('reviews')
+        // );
 
         ReactDOM.render(
         React.createElement(QuestionsAndAnswers, { id: id }),
         document.getElementById('q-and-a')
         );
+        
     </script>
 
   </body>
